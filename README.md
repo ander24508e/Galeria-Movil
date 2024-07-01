@@ -163,5 +163,6 @@ Si quieres ayudarme y contribuir al proyecto, estos son los pasos a seguir:
     ```
 
 5. **Sube tus cambios a GitHub**:
-   
+   ```
     Crea un pull request en GitHub para poder revisar tu contribución.
+   ```
