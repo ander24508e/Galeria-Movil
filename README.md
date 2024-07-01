@@ -125,6 +125,7 @@ Este proyecto ayudara a visualizar diferentes imagenes de turismo, para llamar l
 ├───test
 └───web
     └───icons
+```
 
 ## Ejecución Local
 
@@ -135,8 +136,6 @@ Para ejecutar el bot localmente en tu máquina:
    git clone https://github.com/ander24508e/Galeria-Movil
    cd Galeria-Movil
    ```
-```
-
 
 ## Contribución Galeria-Movil
 
