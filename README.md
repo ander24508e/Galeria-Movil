@@ -3,7 +3,7 @@
 Este proyecto ayudara a visualizar diferentes imagenes de turismo, para llamar la atencion de turistas.
 
 ## Estructura de Galeria-Movil
-
+```
 ├───.github
 │   └───workflows
 ├───android
@@ -135,6 +135,7 @@ Para ejecutar el bot localmente en tu máquina:
    git clone https://github.com/ander24508e/Galeria-Movil
    cd Galeria-Movil
    ```
+```
 
 
 ## Contribución Galeria-Movil
