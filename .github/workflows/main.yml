@@ -1,0 +1,48 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 'stable'
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Build project
+        run: dart compile exe bin/main.dart
+
+      - name: Run unit tests
+        run: dart test
+
+      - name: Analyze code
+        run: dart analyze
+
+      - name: SonarQube Scan
+        env:
+          SONAR_TOKEN: ${{ 1bacfced9f4dc12bb0d1d9aedbe4cbbd2b0bd361 }}
+        run: |
+          dart pub global activate sonar_dart
+          sonar_dart --scanner-mode
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          DEPLOY_KEY: ${{ ander2024 }}
+        run: |
+          echo "Deploying to production..."
